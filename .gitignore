@@ -1,0 +1,4 @@
+./*
+!test/*
+!./*.sh
+guards.sh

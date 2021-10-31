@@ -15,8 +15,21 @@ OUT_DIR=${3}
 FONTSIZE=$(echo ${4}| egrep -o '[0-9]{,2}')
 FONT=${5}
 #-------
+
 for file in *; do
+  #---
+  # дебажим до выполнения условия
+  # т.к. строка после условия не сработала
+  echo ${file}
+  # ---
   [[ -z $(echo $file | grep -oE '.jpg|jpeg') ]] && continue
-  file_name=$(echo ${OUT_DIR}/${file} |cut -d. -f 1)
+  #---
+  # Проверяем отрабатывает ли условие
+  # ожидаем увидеть вывод
+    # out-1.jpg
+    # out-2.jpeg
+    # _anotate.jpg
+  echo ${file}
+  #---
   ./add_text.sh ${TEXT} ${file} ${FONTSIZE} ${FONT}
 done
