@@ -20,7 +20,7 @@ dh=$(( ${h} - ${FONTSIZE} ))
 echo $dw $w $image_size
 #-----
 convert ${FILE} -pointsize ${FONTSIZE} \
--annotate 0x0+${dw}+${h}  ${TEXT} ${FILE}_anotate.jpg
+-annotate 0x0+${dw}+${h}  ${TEXT} ${FILE_NAME}_anotate.jpg
 
 # 5=25
 # 4=53

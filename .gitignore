@@ -1,0 +1,7 @@
+./*
+*
+!test/*
+!./*.sh
+!test.jpg
+!.gitignore
+guards.sh
