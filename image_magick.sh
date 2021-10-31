@@ -17,6 +17,10 @@ FONT=${5}
 #-------
 for file in *; do
   [[ -z $(echo $file | grep -oE '.jpg|jpeg') ]] && continue
-  file_name=$(echo ${OUT_DIR}/${file} |cut -d. -f 1)
+  #---
+  echo """ ${file}  тестируем работу цикл
+  Вопрос - сколько файлов отрабатывает """
+  # ---
+  # Дальше уходим дебажить add_text
   ./add_text.sh ${TEXT} ${file} ${FONTSIZE} ${FONT}
 done

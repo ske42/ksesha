@@ -19,6 +19,11 @@ echo $dh $h ${text_len} ${char_len} $((${text_len} * ${char_len} ))
 dh=$(( ${h} - ${FONTSIZE} ))
 echo $dw $w $image_size
 #-----
+# выводим переменную FILE_NAME
+#---
+echo ${FILE_NAME}
+#----
+# видим что переменная не объявлена - ошибка
 convert ${FILE} -pointsize ${FONTSIZE} \
 -annotate 0x0+${dw}+${h}  ${TEXT} ${FILE_NAME}_anotate.jpg
 
